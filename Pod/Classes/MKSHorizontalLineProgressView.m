@@ -63,7 +63,7 @@
     CGContextSetLineWidth(context, self.barThickness + self.trackPadding);
     CGContextMoveToPoint(context, self.barPadding, self.frame.size.height / 2);
     CGContextAddLineToPoint(context, self.frame.size.width - self.barPadding, self.frame.size.height / 2);
-    CGContextSetLineCap(context, kCGLineCapRound);
+    CGContextSetLineCap(context, kCGLineCapSquare);
     CGContextStrokePath(context);
     
     // Progress Bar
@@ -72,7 +72,7 @@
     CGContextBeginPath(context);
     CGContextMoveToPoint(context, self.barPadding, self.frame.size.height / 2);
     CGContextAddLineToPoint(context, self.barPadding + [self progressPercentage] , self.frame.size.height / 2);
-    CGContextSetLineCap(context, kCGLineCapRound);
+    CGContextSetLineCap(context, kCGLineCapSquare);
     CGContextStrokePath(context);
     
     if(self.isShowPercentageText){
